@@ -12,6 +12,8 @@ const employeeSchema = new mongoose.Schema({
   post: {
     type: String,
     required: [true, "An employee must have a post"],
+    maxlength: [50, "A post cannot have more than 50 characters"],
+    minlength: [5, "A post cannot have less than 5 characters"],
   },
   rating: {
     type: Number,
